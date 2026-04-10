@@ -270,4 +270,4 @@ Bonus diberikan hanya untuk fitur tambahan yang benar-benar berjalan.
 
 **Maksimum bonus: 10 poin**
 
-Happy Coding Folks! 🚀
+Happy Coding Folks! 💜
