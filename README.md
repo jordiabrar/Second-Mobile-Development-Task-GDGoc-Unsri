@@ -52,7 +52,7 @@ Aplikasi **harus berbasis data lokal** di dalam kode Dart, tanpa backend, tanpa 
     - Form Tambah/Edit
     - Settings/Info
 6. Gunakan minimal **1 StatefulWidget** dan beberapa **StatelessWidget**.
-7. Hindari overflow, unbounded constraints, dan layout error. Materi menegaskan pentingnya `Expanded`, `Flexible`, `SingleChildScrollView`, dan `shrinkWrap` untuk kasus layout yang rawan error.
+7. Hindari overflow, unbounded constraints, dan layout error.
 
 ## Spesifikasi fitur wajib
 
@@ -75,7 +75,7 @@ Halaman detail harus menampilkan:
 - informasi lengkap dari item yang dipilih,
 - judul, deskripsi, kategori, dan elemen visual,
 - navigasi kembali ke halaman sebelumnya,
-- minimal satu data dikirim dari halaman Home ke Detail menggunakan `Navigator.pushNamed` atau `Navigator.push` dengan arguments. Materi membahas Navigator, named routes, dan passing data sebagai dasar navigasi Flutter.
+- minimal satu data dikirim dari halaman Home ke Detail menggunakan `Navigator.pushNamed` atau `Navigator.push` dengan arguments.
 
 ### 3) Halaman Form Tambah/Edit
 
@@ -93,7 +93,6 @@ Wajib memakai:
 - `validator`,
 - tombol submit,
 - validasi input minimal untuk field kosong dan minimal panjang karakter.  
-    Materi secara eksplisit menjelaskan penggunaan `Form`, `TextFormField`, `validator`, dan praktik validasi input dengan `AutovalidateMode` atau validasi manual.
 
 ### 4) Halaman Settings / Info
 
@@ -102,7 +101,6 @@ Halaman ini harus memuat:
 - toggle tema terang/gelap atau mengikuti sistem,
 - contoh widget adaptive seperti `Switch.adaptive`,
 - minimal satu elemen accessibility, misalnya `Semantics` atau area sentuh yang layak.  
-    Materi membahas `ThemeData`, `ColorScheme`, `Brightness`, `themeMode`, dan `Semantics` untuk aksesibilitas.
 
 ## Ketentuan responsive design
 
@@ -117,8 +115,7 @@ Aplikasi wajib responsif dan menyesuaikan ukuran layar.
     - **Mobile**: kurang dari 600 px, tampilkan 1 kolom
     - **Tablet**: 600 px sampai 999 px, tampilkan 2 kolom
     - **Desktop/Layar lebar**: 1000 px ke atas, tampilkan 4 kolom.  
-        Breakpoint dan penggunaan `MediaQuery` serta `LayoutBuilder` memang dijelaskan pada materi.
-
+   
 ## Ketentuan state management
 
 Gunakan state management sederhana berbasis `setState` untuk:
@@ -128,7 +125,7 @@ Gunakan state management sederhana berbasis `setState` untuk:
 - perubahan tema,
 - atau perubahan isi form sementara.
 
-Minimal ada **2 state dinamis** yang benar-benar mengubah tampilan. Materi menjelaskan bahwa `setState` dipakai untuk UI lokal yang berubah, sedangkan state yang lebih kompleks bisa naik ke Provider atau Riverpod, tetapi untuk tugas ini cukup `setState` selama kebutuhan aplikasi masih sederhana.
+Minimal ada **2 state dinamis** yang benar-benar mengubah tampilan. `setState` dipakai untuk UI lokal yang berubah, sedangkan state yang lebih kompleks bisa naik ke Provider atau Riverpod, tetapi untuk tugas ini cukup `setState` selama kebutuhan aplikasi masih sederhana.
 
 ## Ketentuan navigasi
 
@@ -165,7 +162,6 @@ Selain itu:
 - gunakan `Expanded` atau `Flexible` di area yang rawan overflow,
 - gunakan `SingleChildScrollView` bila konten lebih tinggi dari layar,
 - gunakan `shrinkWrap: true` bila `ListView` atau `GridView` berada di dalam `Column`.  
-    Ini sesuai dengan pembahasan layout, constraints, dan error trap pada materi.
 
 ## Ketentuan tema dan aksesibilitas
 
@@ -178,7 +174,7 @@ Wajib menerapkan:
 5. Minimal satu tombol atau target sentuh dengan ukuran yang layak.
 6. Teks dan ukuran komponen tidak boleh rusak saat ukuran layar berubah.
 
-Materi juga menekankan bahwa warna dan gaya sebaiknya diambil dari tema, bukan hardcode satu per satu.
+Warna dan gaya sebaiknya diambil dari tema, bukan hardcode satu per satu.
 
 ## Ketentuan performa dan kerapian kode
 
@@ -189,8 +185,6 @@ Wajib:
 - tidak menaruh `setState` di area yang terlalu luas tanpa alasan,
 - menghindari rebuild yang tidak perlu,
 - memberi nama variabel, class, dan method dengan jelas.
-
-Materi secara khusus menekankan bahwa `const` membantu optimasi, dan `setState` yang terlalu luas menyebabkan rebuild masif.
 
 ## Hal yang tidak boleh
 
